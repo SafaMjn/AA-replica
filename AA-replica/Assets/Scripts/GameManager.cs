@@ -9,12 +9,14 @@ public class GameManager : Singleton<GameManager>
 
     public  int pinCount ;
     public TMP_Text score_txt;
+    public GameObject restart_btn;
 
 
     void Start()
     {
         pinCount = 0;
         score_txt.text = pinCount.ToString();
+        restart_btn.SetActive(false);
     }
 
     public void EndGame()
@@ -23,7 +25,7 @@ public class GameManager : Singleton<GameManager>
         PinSpawner_ctr.Instance.enabled = false;
 
         isGameOver = true;
-
+        restart_btn.SetActive(true);
         animator.SetTrigger("EndGame");
     }
 
