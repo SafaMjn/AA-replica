@@ -9,6 +9,13 @@ AA-replica/[Bb]uild/
 AA-replica/[Bb]uilds/
 AA-replica/[Ll]ogs/
 AA-replica/[Mm]emoryCaptures/
+AA-ColorSwitch/[Ll]ibrary/
+AA-ColorSwitch/[Tt]emp/
+AA-ColorSwitch/[Oo]bj/
+AA-ColorSwitch/[Bb]uild/
+AA-ColorSwitch/[Bb]uilds/
+AA-ColorSwitch/[Ll]ogs/
+AA-ColorSwitch/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
