@@ -6,7 +6,7 @@ public class Pin_mb : MonoBehaviour
 {
     private bool isPinned = false;
     public float speed = 20f;
-    public Color color;
+    public Color32 color;
     public Rigidbody2D rb;
 
      void Start()
@@ -27,6 +27,18 @@ public class Pin_mb : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.tag == "ColorWheel")
+        {
+            Color32 sectionColor = (Color32)collision.GetComponent<SpriteRenderer>().color;
+
+
+            if (!sectionColor.Equals(this.color))
+            {
+                GameManager.Instance.EndGame();
+                Debug.Log(color);
+            }
+        }
+
         if (collision.tag == "Pin")
         {
             GameManager.Instance.EndGame();

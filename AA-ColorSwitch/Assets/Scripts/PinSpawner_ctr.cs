@@ -9,7 +9,7 @@ public class PinSpawner_ctr : Singleton<PinSpawner_ctr>
     public SpriteRenderer spawnSprite;
     public Transform spawnPoint;
 
-    public Color[] colors;
+    public Color32[] colors;
     int random;
     void Start()
     {
@@ -19,8 +19,8 @@ public class PinSpawner_ctr : Singleton<PinSpawner_ctr>
     private void SelectRandomColor()
     {
         random = UnityEngine.Random.Range(0, colors.Length);
-        Color color = colors[random];
-        color.a = 0.75f;
+        Color32 color = colors[random];
+        color.a = 190;
         spawnSprite.color = color;
     }
 

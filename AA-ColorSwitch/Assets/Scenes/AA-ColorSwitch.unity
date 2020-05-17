@@ -796,10 +796,14 @@ MonoBehaviour:
   spawnSprite: {fileID: 1658068951}
   spawnPoint: {fileID: 1658068950}
   colors:
-  - {r: 0.93725497, g: 0.85098046, b: 0.078431375, a: 1}
-  - {r: 0.20392159, g: 0.882353, b: 0.9450981, a: 1}
-  - {r: 1, g: 0, b: 0.5019608, a: 1}
-  - {r: 0.54901963, g: 0.07450981, b: 0.9843137, a: 1}
+  - serializedVersion: 2
+    rgba: 4279556591
+  - serializedVersion: 2
+    rgba: 4294041908
+  - serializedVersion: 2
+    rgba: 4286578943
+  - serializedVersion: 2
+    rgba: 4294644620
 --- !u!1 &990133632
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,6 +948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   rotator: {fileID: 273436771}
+  colorWheel: {fileID: 1861081228}
 --- !u!1 &1295692695
 GameObject:
   m_ObjectHideFlags: 0
