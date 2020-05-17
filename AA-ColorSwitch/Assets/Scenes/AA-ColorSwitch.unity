@@ -243,7 +243,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: de767e1d48bdf664eb48b047169e3d98, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -793,7 +793,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pinPrefab: {fileID: 5991433186698918970, guid: 5d78d5ec68b7b7f44945a9fcc59e3075,
     type: 3}
+  spawnSprite: {fileID: 1658068951}
   spawnPoint: {fileID: 1658068950}
+  colors:
+  - {r: 0.93725497, g: 0.85098046, b: 0.078431375, a: 1}
+  - {r: 0.20392159, g: 0.882353, b: 0.9450981, a: 1}
+  - {r: 1, g: 0, b: 0.5019608, a: 1}
+  - {r: 0.54901963, g: 0.07450981, b: 0.9843137, a: 1}
 --- !u!1 &990133632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,7 +1041,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &1425414069
 GameObject:

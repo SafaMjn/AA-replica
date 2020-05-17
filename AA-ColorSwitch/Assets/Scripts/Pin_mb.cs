@@ -6,10 +6,15 @@ public class Pin_mb : MonoBehaviour
 {
     private bool isPinned = false;
     public float speed = 20f;
+    public Color color;
     public Rigidbody2D rb;
 
      void Start()
     {
+        foreach (var pinSprite in GetComponentsInChildren<SpriteRenderer>())
+        {
+            pinSprite.color = color;
+        }
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
     }
     void Update()
@@ -26,6 +31,7 @@ public class Pin_mb : MonoBehaviour
         {
             GameManager.Instance.EndGame();
             return;
+
 
         } else if (collision.tag == "Rotator")
         {
