@@ -4,6 +4,10 @@
 *.cginc text
 *.shader text
 
+*.cs linguist-detectable=true
+*.cginc linguist-detectable=false
+*.shader linguist-detectable=false
+
 *.mat merge=unityyamlmerge eol=lf
 *.anim merge=unityyamlmerge eol=lf
 *.unity merge=unityyamlmerge eol=lf
