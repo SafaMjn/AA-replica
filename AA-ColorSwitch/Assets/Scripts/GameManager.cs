@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    private bool isGameOver = false;
+    public bool isGameOver = false;
     public Animator animator;
 
     public  int pinCount ;
@@ -23,7 +23,6 @@ public class GameManager : Singleton<GameManager>
     {
         Rotation_ctr.Instance.enabled = false;
         PinSpawner_ctr.Instance.enabled = false;
-        pinCount--;
         isGameOver = true;
         restart_btn.SetActive(true);
         animator.SetTrigger("EndGame");

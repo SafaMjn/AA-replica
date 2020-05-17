@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,8 +22,13 @@ public class Pin_mb : MonoBehaviour
     {
         if (!isPinned)
         {
-           rb.MovePosition(rb.position +Vector2.up*speed*Time.deltaTime);
+            MovePin();
         }
+    }
+
+    private void MovePin()
+    {
+        rb.MovePosition(rb.position + Vector2.up * speed * Time.deltaTime);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -30,27 +36,26 @@ public class Pin_mb : MonoBehaviour
         if (collision.tag == "ColorWheel")
         {
             Color32 sectionColor = (Color32)collision.GetComponent<SpriteRenderer>().color;
-
-
             if (!sectionColor.Equals(this.color))
             {
                 GameManager.Instance.EndGame();
-                Debug.Log(color);
             }
         }
 
         if (collision.tag == "Pin")
         {
             GameManager.Instance.EndGame();
-            return;
-
-
+            
         } else if (collision.tag == "Rotator")
         {
+            if (!GameManager.Instance.isGameOver)
+            {
+                GameManager.Instance.pinCount += 1;
+                GameManager.Instance.SetScore();
+            }
             isPinned = true;
             transform.SetParent(collision.transform);
-            GameManager.Instance.pinCount += 1;
-            GameManager.Instance.SetScore();
+            
         }
     }
 }

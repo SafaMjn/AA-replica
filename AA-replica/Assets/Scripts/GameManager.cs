@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    private bool isGameOver = false;
+    public bool isGameOver = false;
     public Animator animator;
 
     public  int pinCount ;

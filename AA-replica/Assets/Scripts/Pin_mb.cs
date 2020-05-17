@@ -31,8 +31,11 @@ public class Pin_mb : MonoBehaviour
         {
             isPinned = true;
             transform.SetParent(collision.transform);
-            GameManager.Instance.pinCount += 1;
-            GameManager.Instance.SetScore();
+            if (!GameManager.Instance.isGameOver)
+            {
+                GameManager.Instance.pinCount += 1;
+                GameManager.Instance.SetScore();
+            }
         }
     }
 }
